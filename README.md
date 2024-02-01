@@ -22,52 +22,54 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+O projeto visa desenvolver uma aplicação de simulação para a geração do cartão de entrada e saída de um estacionamento, fornecendo informações detalhadas sobre o tempo de permanência do veículo no estacionamento e o valor final a ser pago utilizando a moeda local brasileira como referência.
 
-## Installation
+
+## Pré-requisitos
+
+Antes de iniciar, é necessário ter um banco de dados (à sua escolha) e a tecnologia [Redis](https://redis.io/) configurados em sua máquina. A porta de comunicação padrão para o Redis é 6379, mas você pode alterá-la de acordo com suas preferências. Além disso, é recomendável ter um editor de código, como o [VSCode](https://code.visualstudio.com/), para facilitar o trabalho com o código.
+
+### 🎲 Rodando o Back End (servidor)
 
 ```bash
+# Clone este repositório
+$ git clone <https://github.com/Weslley049/Westacionamento>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd Westacionamento
+
+# Altere o arquivo .env para apontar para o seu banco e depois migre os dados das tabelas do banco
+
+#Para migrar as tabelas do banco utilize o comando:
+$ npx prisma migrate dev
+
+
+# Instale as dependências
 $ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start:dev
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+
 ```
+### 🛠 Tecnologias Utilizadas
 
-## Running the app
+As seguintes ferramentas foram usadas na construção do projeto:
+- [Nest.js](https://nestjs.com/)
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redis](https://redis.io/)
+- [Bull](https://www.npmjs.com/package/bull?activeTab=readme)
+- [Swagger](https://swagger.io/)
+- [Prisma](https://www.prisma.io/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
 
-```bash
-# development
-$ yarn run start
 
-# watch mode
-$ yarn run start:dev
+### Status do Projeto 
+<h4> 
+	Projeto já pode ser utilizado. Esperando novas funcionalidades 🚀 
+</h4>
 
-# production mode
-$ yarn run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
